@@ -354,7 +354,7 @@ const lose = () => {
    
     setTimeout(() => {
   
-      // reSet();
+      reSet();
       restartNew();
     }, 500);
   }
@@ -378,6 +378,7 @@ const win = () => {
       context.drawImage(imgyouWon, 350, 175);
       
       setTimeout(() => {
+        // reSet();
         $("canvas").hide();
         // document.querySelector("canvas").style.visibility = "hidden";
         startScreen.style.display = "flex";

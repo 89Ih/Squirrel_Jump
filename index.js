@@ -353,9 +353,11 @@ const lose = () => {
     context.drawImage(imgGameOver, 350, 175);
    
     setTimeout(() => {
-  
-      // reSet();
+  //  document.querySelector("canvas").style.visibility = "hidden";
+  //  startScreen.style.display = "flex";
+      
       restartNew();
+      reSet();
     }, 500);
   }
 };

@@ -34,7 +34,7 @@ class Player {
       y: 0
     }
     this.imagesQuirrel = imagesQuirrel;
-    this.width = imagesQuirrel.width
+    this.width = imagesQuirrel.width -55 
     this.height = imagesQuirrel.width -55
   }
   // define what is player look like to?
@@ -70,19 +70,19 @@ class Platform {
     }
 
     this.image = image;
-    this.width = image.width;
-    this.height = image.height;
+    this.width = image.width -55;
+    this.height = image.height ;
   }
   draw() {
     context.drawImage(this.image, this.position.x, this.position.y);
   }
 }
 let multiPlatforms = [
-  new Platform({ x: -150, y:665, image }),
-  new Platform({ x: -50, y:  665, image }),
-  new Platform({ x:  50, y:  665, image }),
-  new Platform({ x: 300 , y:  665, image }),
-  new Platform({ x: 500, y:  665, image }),
+  // new Platform({ x: -150, y:665, image }),
+  // new Platform({ x: -50, y:  665, image }),
+  new Platform({ x:  0, y:  665, image }),
+  new Platform({ x: image.width , y:  665, image }),
+  new Platform({ x: image.width*2, y:  665, image }),
   new Platform({ x: 750, y:  665, image }),
   new Platform({ x: 3400, y:  665, image }),
 
@@ -96,7 +96,7 @@ let multiPlatforms = [
   new Platform({ x: 3800 + 500, y: 665, image }),
   new Platform({ x: 3800 + 700, y:  665, image }),
 ]
-console.log(multiPlatforms[0].image.width)
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -111,8 +111,8 @@ class Pallet {
       y   // y:y
     }
     this.imageP1 = imageP1;
-    this.width = imageP1.width;
-    this.height = imageP1.height;
+    this.width = imageP1.width -55;
+    this.height = imageP1.height ;
   }
   draw() {
     context.drawImage(this.imageP1, this.position.x, this.position.y);
@@ -133,7 +133,7 @@ let multiPallets = [
   new Pallet({ x: 5610.5, y: 310.75, imageP1 }),
   new Pallet({ x: 5715.5, y: 155.37, imageP1 }),
 ]
-// console.log(multiPallets[3])
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function reSet() {
@@ -141,11 +141,11 @@ function reSet() {
   player = new Player();
 
   multiPlatforms = [
-    new Platform({ x: -150, y:665, image }),
-    new Platform({ x: -50, y:  665, image }),
-    new Platform({ x:  50, y:  665, image }),
-    new Platform({ x: 300 , y:  665, image }),
-    new Platform({ x: 500, y:  665, image }),
+    // new Platform({ x: -150, y:665, image }),
+    // new Platform({ x: -50, y:  665, image }),
+    new Platform({ x:  0, y:  665, image }),
+    new Platform({ x: image.width , y:  665, image }),
+    new Platform({ x: image.width*2, y:  665, image }),
     new Platform({ x: 750, y:  665, image }),
     new Platform({ x: 3400, y:  665, image }),
 
@@ -231,7 +231,7 @@ function anmiate() {
 
   multiPlatforms.forEach(platform => {
 
-    if (player.position.y + player.height <= platform.position.y
+    if (player.position.y + player.height  <= platform.position.y
 
       && player.position.y + player.height + player.velocity.y >= platform.position.y
 

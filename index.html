@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+<body>
+   <br>
+    <nav>
+        <li id="start-button"  class="material-symbols-outlined">start</li>
+
+        <li onclick="reSet()"  class="material-symbols-outlined">restart_alt</li>
+
+        <li onclick="restartNew()" class="material-symbols-outlined">home</li>
+        
+        <li class="loading-text">0%</li>
+    </nav>
+    <div class="introSection">
+        <img src="./images/INTRO.png" alt="INTRO">
+        
+        <p>Use keys to move squirrel</p>
+       
+        <img src="./images/keys.png" alt="keys">
+    </div>
+
+    <canvas>
+
+    </canvas>
+</body>
+</html>

@@ -354,7 +354,7 @@ const lose = () => {
    
     setTimeout(() => {
   
-      reSet();
+      // reSet();
       restartNew();
     }, 500);
   }

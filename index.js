@@ -355,9 +355,9 @@ const lose = () => {
     setTimeout(() => {
   //  document.querySelector("canvas").style.visibility = "hidden";
   //  startScreen.style.display = "flex";
-      
-      restartNew();
       reSet();
+      restartNew();
+    
     }, 500);
   }
 };
